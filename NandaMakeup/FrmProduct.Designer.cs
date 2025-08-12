@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtNomeCompleto = new System.Windows.Forms.TextBox();
             this.LblName = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtHospedagem = new System.Windows.Forms.TextBox();
             this.LblHospedagem1 = new System.Windows.Forms.Label();
             this.LblHospedagem = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtBoxNumeracaoRoupa = new System.Windows.Forms.TextBox();
             this.LblNumeração = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.LblDataehorário = new System.Windows.Forms.Label();
             this.LblDataehorario2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.RbSim = new System.Windows.Forms.RadioButton();
+            this.RbNao = new System.Windows.Forms.RadioButton();
             this.LblDatacomemorativa = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TxtOcasiao = new System.Windows.Forms.TextBox();
+            this.BtnPróximo = new System.Windows.Forms.Button();
+            this.DtpDataHorario = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // textBox1
+            // TxtNomeCompleto
             // 
-            this.textBox1.Location = new System.Drawing.Point(229, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 4;
+            this.TxtNomeCompleto.Location = new System.Drawing.Point(229, 12);
+            this.TxtNomeCompleto.Name = "TxtNomeCompleto";
+            this.TxtNomeCompleto.Size = new System.Drawing.Size(200, 20);
+            this.TxtNomeCompleto.TabIndex = 4;
             // 
             // LblName
             // 
@@ -62,13 +63,13 @@
             this.LblName.Text = "Nome completo";
             this.LblName.Click += new System.EventHandler(this.LblName_Click);
             // 
-            // textBox2
+            // TxtHospedagem
             // 
-            this.textBox2.Location = new System.Drawing.Point(229, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.TxtHospedagem.Location = new System.Drawing.Point(229, 92);
+            this.TxtHospedagem.Name = "TxtHospedagem";
+            this.TxtHospedagem.Size = new System.Drawing.Size(200, 20);
+            this.TxtHospedagem.TabIndex = 6;
+            this.TxtHospedagem.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // LblHospedagem1
             // 
@@ -92,12 +93,12 @@
             this.LblHospedagem.Text = "(nome do hotel/local)";
             this.LblHospedagem.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox3
+            // TxtBoxNumeracaoRoupa
             // 
-            this.textBox3.Location = new System.Drawing.Point(258, 186);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 20);
-            this.textBox3.TabIndex = 9;
+            this.TxtBoxNumeracaoRoupa.Location = new System.Drawing.Point(258, 186);
+            this.TxtBoxNumeracaoRoupa.Name = "TxtBoxNumeracaoRoupa";
+            this.TxtBoxNumeracaoRoupa.Size = new System.Drawing.Size(171, 20);
+            this.TxtBoxNumeracaoRoupa.TabIndex = 9;
             // 
             // LblNumeração
             // 
@@ -108,14 +109,6 @@
             this.LblNumeração.Size = new System.Drawing.Size(240, 29);
             this.LblNumeração.TabIndex = 8;
             this.LblNumeração.Text = "Numeração de roupa";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(229, 257);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 20);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // LblDataehorário
             // 
@@ -138,28 +131,28 @@
             this.LblDataehorario2.TabIndex = 12;
             this.LblDataehorario2.Text = "do agendamento";
             // 
-            // radioButton1
+            // RbSim
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(274, 377);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(44, 17);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "SIM";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.RbSim.AutoSize = true;
+            this.RbSim.Location = new System.Drawing.Point(274, 377);
+            this.RbSim.Name = "RbSim";
+            this.RbSim.Size = new System.Drawing.Size(44, 17);
+            this.RbSim.TabIndex = 15;
+            this.RbSim.TabStop = true;
+            this.RbSim.Text = "SIM";
+            this.RbSim.UseVisualStyleBackColor = true;
+            this.RbSim.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // RbNao
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(270, 400);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(48, 17);
-            this.radioButton2.TabIndex = 16;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "NÃO";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RbNao.AutoSize = true;
+            this.RbNao.Location = new System.Drawing.Point(270, 400);
+            this.RbNao.Name = "RbNao";
+            this.RbNao.Size = new System.Drawing.Size(48, 17);
+            this.RbNao.TabIndex = 16;
+            this.RbNao.TabStop = true;
+            this.RbNao.Text = "NÃO";
+            this.RbNao.UseVisualStyleBackColor = true;
             // 
             // LblDatacomemorativa
             // 
@@ -171,12 +164,30 @@
             this.LblDatacomemorativa.TabIndex = 17;
             this.LblDatacomemorativa.Text = "Data comemorativa";
             // 
-            // textBox6
+            // TxtOcasiao
             // 
-            this.textBox6.Location = new System.Drawing.Point(466, 354);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(128, 20);
-            this.textBox6.TabIndex = 18;
+            this.TxtOcasiao.Location = new System.Drawing.Point(324, 374);
+            this.TxtOcasiao.Name = "TxtOcasiao";
+            this.TxtOcasiao.Size = new System.Drawing.Size(128, 20);
+            this.TxtOcasiao.TabIndex = 18;
+            // 
+            // BtnPróximo
+            // 
+            this.BtnPróximo.Location = new System.Drawing.Point(699, 415);
+            this.BtnPróximo.Name = "BtnPróximo";
+            this.BtnPróximo.Size = new System.Drawing.Size(75, 23);
+            this.BtnPróximo.TabIndex = 19;
+            this.BtnPróximo.Text = "Próximo";
+            this.BtnPróximo.UseVisualStyleBackColor = true;
+            this.BtnPróximo.Click += new System.EventHandler(this.BtnPróximo_Click);
+            // 
+            // DtpDataHorario
+            // 
+            this.DtpDataHorario.Location = new System.Drawing.Point(229, 257);
+            this.DtpDataHorario.Name = "DtpDataHorario";
+            this.DtpDataHorario.Size = new System.Drawing.Size(242, 20);
+            this.DtpDataHorario.TabIndex = 20;
+            this.DtpDataHorario.ValueChanged += new System.EventHandler(this.DtpDataHorario_ValueChanged);
             // 
             // FrmProduct
             // 
@@ -184,19 +195,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NandaMakeup.Properties.Resources.nanda3;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.DtpDataHorario);
+            this.Controls.Add(this.BtnPróximo);
+            this.Controls.Add(this.TxtOcasiao);
             this.Controls.Add(this.LblDatacomemorativa);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.RbNao);
+            this.Controls.Add(this.RbSim);
             this.Controls.Add(this.LblDataehorario2);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.LblDataehorário);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TxtBoxNumeracaoRoupa);
             this.Controls.Add(this.LblNumeração);
             this.Controls.Add(this.LblHospedagem);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtHospedagem);
             this.Controls.Add(this.LblHospedagem1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtNomeCompleto);
             this.Controls.Add(this.LblName);
             this.Name = "FrmProduct";
             this.Text = "Form2";
@@ -208,19 +220,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtNomeCompleto;
         private System.Windows.Forms.Label LblName;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtHospedagem;
         private System.Windows.Forms.Label LblHospedagem1;
         private System.Windows.Forms.Label LblHospedagem;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtBoxNumeracaoRoupa;
         private System.Windows.Forms.Label LblNumeração;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label LblDataehorário;
         private System.Windows.Forms.Label LblDataehorario2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton RbSim;
+        private System.Windows.Forms.RadioButton RbNao;
         private System.Windows.Forms.Label LblDatacomemorativa;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TxtOcasiao;
+        private System.Windows.Forms.Button BtnPróximo;
+        private System.Windows.Forms.DateTimePicker DtpDataHorario;
     }
 }

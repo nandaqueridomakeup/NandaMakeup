@@ -56,5 +56,32 @@ namespace NandaMakeup
         {
 
         }
+
+        private void BtnPróximo_Click(object sender, EventArgs e)
+        {
+            string nome = TxtNomeCompleto.Text;
+            string hospedagem= TxtHospedagem.Text;
+            string numeracaoroupa = TxtBoxNumeracaoRoupa.Text;
+            string datahorario = DtpDataHorario.Value.ToString("dd/MM/yyyy HH:mm");
+
+            string datacomemorativa = RbSim.Checked ? "Sim" : "Não";
+            string ocasiao = RbSim.Checked ? TxtOcasiao.Text : "Nenhuma";
+
+            string mensagem = $"Cadastro realizado com sucesso! \n\n" +
+                $"Nome completo: {nome}\n" +
+                $"Hospedagem: {hospedagem}\n"+
+                $"Numeração de roupa: {numeracaoroupa}\n"+
+                $"Data e horário: {datahorario}\n" +
+                $"Data Comemorativa: {datacomemorativa}\n"+
+                $"Ocasião: {ocasiao}\n";
+
+            MessageBox.Show (mensagem, "Dados cadastrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void DtpDataHorario_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
