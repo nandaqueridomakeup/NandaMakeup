@@ -63,6 +63,46 @@ namespace NandaMakeup.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _10 {
+            get {
+                object obj = ResourceManager.GetObject("10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20 {
+            get {
+                object obj = ResourceManager.GetObject("20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Documento_A5_cadastro_de_hóspedes_eco_resort_suave_verde_e_bege {
+            get {
+                object obj = ResourceManager.GetObject("Documento A5 cadastro de hóspedes eco resort suave verde e bege", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Documento_A5_cadastro_de_hóspedes_eco_resort_suave_verde_e_bege__20_x_10_cm_ {
+            get {
+                object obj = ResourceManager.GetObject("Documento A5 cadastro de hóspedes eco resort suave verde e bege (20 x 10 cm)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nanda {
             get {
                 object obj = ResourceManager.GetObject("nanda", resourceCulture);

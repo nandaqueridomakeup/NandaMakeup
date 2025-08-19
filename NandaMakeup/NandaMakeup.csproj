@@ -119,5 +119,17 @@
   <ItemGroup>
     <None Include="Resources\nanda3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documento A5 cadastro de hóspedes eco resort suave verde e bege.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documento A5 cadastro de hóspedes eco resort suave verde e bege %2820 x 10 cm%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
