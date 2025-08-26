@@ -37,6 +37,7 @@
             this.TxtOcasiao = new System.Windows.Forms.TextBox();
             this.BtnPróximo = new System.Windows.Forms.Button();
             this.DtpDataHorario = new System.Windows.Forms.DateTimePicker();
+            this.CmbHorario = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // TxtNomeCompleto
@@ -48,7 +49,7 @@
             // 
             // TxtHospedagem
             // 
-            this.TxtHospedagem.Location = new System.Drawing.Point(439, 231);
+            this.TxtHospedagem.Location = new System.Drawing.Point(456, 231);
             this.TxtHospedagem.Name = "TxtHospedagem";
             this.TxtHospedagem.Size = new System.Drawing.Size(200, 20);
             this.TxtHospedagem.TabIndex = 6;
@@ -74,7 +75,7 @@
             // RbSim
             // 
             this.RbSim.AutoSize = true;
-            this.RbSim.Location = new System.Drawing.Point(487, 355);
+            this.RbSim.Location = new System.Drawing.Point(725, 358);
             this.RbSim.Name = "RbSim";
             this.RbSim.Size = new System.Drawing.Size(44, 17);
             this.RbSim.TabIndex = 15;
@@ -86,7 +87,7 @@
             // RbNao
             // 
             this.RbNao.AutoSize = true;
-            this.RbNao.Location = new System.Drawing.Point(487, 395);
+            this.RbNao.Location = new System.Drawing.Point(725, 392);
             this.RbNao.Name = "RbNao";
             this.RbNao.Size = new System.Drawing.Size(48, 17);
             this.RbNao.TabIndex = 16;
@@ -96,7 +97,7 @@
             // 
             // TxtOcasiao
             // 
-            this.TxtOcasiao.Location = new System.Drawing.Point(537, 351);
+            this.TxtOcasiao.Location = new System.Drawing.Point(793, 355);
             this.TxtOcasiao.Name = "TxtOcasiao";
             this.TxtOcasiao.Size = new System.Drawing.Size(128, 20);
             this.TxtOcasiao.TabIndex = 18;
@@ -119,12 +120,34 @@
             this.DtpDataHorario.TabIndex = 20;
             this.DtpDataHorario.ValueChanged += new System.EventHandler(this.DtpDataHorario_ValueChanged);
             // 
+            // CmbHorario
+            // 
+            this.CmbHorario.FormattingEnabled = true;
+            this.CmbHorario.Items.AddRange(new object[] {
+            "4 hrs ",
+            "5 hrs",
+            "6 hrs ",
+            "7 hrs",
+            "14 hrs ",
+            "15 hrs ",
+            "16 hrs",
+            "17 hrs ",
+            "18 hrs ",
+            "19 hrs ",
+            "20 hrs "});
+            this.CmbHorario.Location = new System.Drawing.Point(499, 350);
+            this.CmbHorario.Name = "CmbHorario";
+            this.CmbHorario.Size = new System.Drawing.Size(121, 21);
+            this.CmbHorario.TabIndex = 21;
+            this.CmbHorario.SelectedIndexChanged += new System.EventHandler(this.CmbHorario_SelectedIndexChanged);
+            // 
             // FrmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NandaMakeup.Properties.Resources._10;
+            this.BackgroundImage = global::NandaMakeup.Properties.Resources._10__1_;
             this.ClientSize = new System.Drawing.Size(1064, 591);
+            this.Controls.Add(this.CmbHorario);
             this.Controls.Add(this.DtpDataHorario);
             this.Controls.Add(this.BtnPróximo);
             this.Controls.Add(this.TxtOcasiao);
@@ -153,5 +176,6 @@
         private System.Windows.Forms.TextBox TxtOcasiao;
         private System.Windows.Forms.Button BtnPróximo;
         private System.Windows.Forms.DateTimePicker DtpDataHorario;
+        private System.Windows.Forms.ComboBox CmbHorario;
     }
 }

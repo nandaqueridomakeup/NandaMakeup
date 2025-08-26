@@ -67,14 +67,15 @@ namespace NandaMakeup
             string hospedagem= TxtHospedagem.Text;
             string numeracaoroupa = TxtBoxNumeracaoRoupa.Text;
             DateTime datahorario = DtpDataHorario.Value;
+            string horario = CmbHorario.Text;
            
             bool datacomemorativa = RbSim.Checked; // true se Sim, false se Não
             string ocasiao = RbSim.Checked ? TxtOcasiao.Text : null;
 
 
             string query = @"INSERT INTO CADCLI
-             (NOME, HOSPEDAGEM, MUMERACAOROUPA, DATAHORARIO, DATACOMEMORATIVA, DATACOMEMORATIVADESCRI) 
-        VALUES (@Nome, @Hospedagem, @Numeracaoroupa, @DataHorario, @DataComemorativa, @Ocasiao);";
+             (NOMECLI, HOSPEDAGEM, MUMERACAOROUPA, DATAAGENDA,DATACOMEMORATIVA, DATACOMEMORATIVADESCRI, HORARIO) 
+        VALUES (@Nome, @Hospedagem, @Numeracaoroupa, @DataHorario, @DataComemorativa, @Ocasiao, @HORARIO);";
 
 
 
@@ -90,6 +91,8 @@ namespace NandaMakeup
                 cmd.Parameters.AddWithValue("@DataHorario", datahorario);
                 cmd.Parameters.AddWithValue("@DataComemorativa", datacomemorativa);
                 cmd.Parameters.AddWithValue("@Ocasiao", (object)ocasiao ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@HORARIO", horario);
+
 
                 try
                 {
@@ -101,6 +104,8 @@ namespace NandaMakeup
                 {
                     MessageBox.Show("Erro ao salvar dados: " + ex.Message);
                 }
+                
+           
             }
         
 
@@ -110,15 +115,21 @@ namespace NandaMakeup
                 $"Nome completo: {nome}\n" +
                 $"Hospedagem: {hospedagem}\n"+
                 $"Numeração de roupa: {numeracaoroupa}\n"+
-                $"Data e horário: {datahorario}\n" +
+                $"Data: {datahorario}\n" +
                 $"Data Comemorativa: {datacomemorativa}\n"+
                 $"Ocasião: {ocasiao}\n";
 
             MessageBox.Show (mensagem, "Dados cadastrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
 
         }
 
         private void DtpDataHorario_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbHorario_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

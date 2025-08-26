@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgenda.Designer.cs">
+      <DependentUpon>FrmAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPaginaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPaginaInicial.Designer.cs">
+      <DependentUpon>FrmPaginaInicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAgenda.resx">
+      <DependentUpon>FrmAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPaginaInicial.resx">
+      <DependentUpon>FrmPaginaInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +148,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nanda4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cópia de 10 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cópia de 10 %281%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

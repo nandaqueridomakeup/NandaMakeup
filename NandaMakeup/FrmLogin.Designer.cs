@@ -47,9 +47,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NandaMakeup.Properties.Resources.Yellow_and_Black_Minimalist_Makeup_Presentation1;
-            this.ClientSize = new System.Drawing.Size(864, 654);
+            this.BackgroundImage = global::NandaMakeup.Properties.Resources.nanda4;
+            this.ClientSize = new System.Drawing.Size(864, 600);
             this.Controls.Add(this.Btnlogin);
+            this.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Name = "Frmroduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro cliente";

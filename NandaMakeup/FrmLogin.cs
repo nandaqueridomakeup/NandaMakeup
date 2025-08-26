@@ -19,7 +19,7 @@ namespace NandaMakeup
 
         private void Btnlogin_Click(object sender, EventArgs e)
         {
-            FrmProduct product = new FrmProduct();
+           Form1 product = new Form1();
             product. ShowDialog();
         }
     }

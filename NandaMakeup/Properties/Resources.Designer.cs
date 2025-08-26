@@ -73,9 +73,39 @@ namespace NandaMakeup.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _10__1_ {
+            get {
+                object obj = ResourceManager.GetObject("10 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _20 {
             get {
                 object obj = ResourceManager.GetObject("20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cópia_de_10__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Cópia de 10 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cópia_de_10__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("Cópia de 10 (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +166,16 @@ namespace NandaMakeup.Properties {
         internal static System.Drawing.Bitmap nanda3 {
             get {
                 object obj = ResourceManager.GetObject("nanda3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nanda4 {
+            get {
+                object obj = ResourceManager.GetObject("nanda4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
