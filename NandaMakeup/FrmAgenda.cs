@@ -12,79 +12,82 @@ using System.Windows.Forms;
 namespace NandaMakeup
 {
     public partial class FrmAgenda : Form
+
     {
-        string conexao = "Server=SQLEXPRESS;Database=CJ3027708PR2;User Id=aluno;Password=aluno;";
         public FrmAgenda()
         {
             InitializeComponent();
+
+            // Associa o evento Load do formulário ao método FrmAgenda_Load
+            this.Load += FrmAgenda_Load;
         }
 
         private void FrmAgenda_Load(object sender, EventArgs e)
         {
-          
-
-
-            // Carregar agendamentos do dia atual ao abrir a tela
             CarregarAgenda(DateTime.Today);
+            DestacarDatas();
+
+            // Destaca todas as datas existentes na tabela
+            DestacarDatas();
         }
 
+        private void CarregarAgenda(DateTime datainicial)
+        {
+            string conexao = "Server=SQLEXPRESS;Database=CJ3027708PR2;User Id=aluno;Password=aluno;";
+            string sql = @"SELECT NOMECLI, HOSPEDAGEM, MUMERACAOROUPA, DATAAGENDA, DATACOMEMORATIVA, DATACOMEMORATIVADESCRI, HORARIO
+                   FROM cadcli
+                   WHERE DATAAGENDA>= @datainicial
+                   ORDER BY DATAAGENDA, HORARIO";
+
+            using (SqlConnection con = new SqlConnection(conexao))
+            using (SqlCommand cmd = new SqlCommand(sql, con))
+            {
+                cmd.Parameters.AddWithValue("@datainicial", datainicial);
+                
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+            }
+        }
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            // Quando trocar a data no calendário, recarrega os dados
-            CarregarAgenda(e.Start);
+            // Passa o primeiro dia do mês selecionado
+            DateTime dataSelecionada = new DateTime(e.Start.Year, e.Start.Month, 1);
+            CarregarAgenda(dataSelecionada);
         }
-
-        private void CarregarAgenda(DateTime dataSelecionada)
+        private void DestacarDatas()
         {
+            string conexao = @"Server=SQLEXPRESS;Database=CJ3027708PR2;User Id=aluno;Password=aluno;";
+            string sql = "SELECT DATAAGENDA FROM cadcli";
+
             using (SqlConnection con = new SqlConnection(conexao))
+            using (SqlCommand cmd = new SqlCommand(sql, con))
             {
-                try
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<DateTime> datas = new List<DateTime>();
+
+                while (reader.Read())
                 {
-                    con.Open(); // Abrir conexão
-
-                    string query = @"
-                        SELECT 
-                            NOMECLI,
-                            HOSPEDAGEM,
-                            MUMERACAOROUPA,
-                            DATAAGENDA,
-                            DATACOMEMORATIVA,
-                            DATACOMEMORATIVADESCRI,
-                            HORARIO
-                        FROM CADCLI
-                        WHERE CAST(DATAAGENDA AS DATE) = @Data
-                        ORDER BY HORARIO";
-
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@Data", dataSelecionada.Date);
-
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    dataGridView1.DataSource = dt;
-
-                    // Ajustar colunas para ficarem mais legíveis
-                    dataGridView1.Columns["NOMECLI"].HeaderText = "Cliente";
-                    dataGridView1.Columns["HOSPEDAGEM"].HeaderText = "Hospedagem";
-                    dataGridView1.Columns["MUMERACAOROUPA"].HeaderText = "Roupa";
-                    dataGridView1.Columns["HORARIO"].HeaderText = "Horário";
-                    dataGridView1.Columns["DATACOMEMORATIVA"].HeaderText = "Comemorativa";
-                    dataGridView1.Columns["DATACOMEMORATIVADESCRI"].HeaderText = "Descrição";
-
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    datas.Add(Convert.ToDateTime(reader["DATAAGENDA"]));
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao carregar agenda: " + ex.Message);
-                }
+
+                monthCalendar1.BoldedDates = datas.ToArray();
             }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
+    {
+        // Voltar para a tela inicial
+        this.Close();
+    }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Voltar para a tela inicial
-            this.Close();
+           
         }
     }
 }
