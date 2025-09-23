@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NandaMakeup
 {
-    public partial class Form1 : Form
+    public partial class FrmPaginaInicial : Form
     {
-        public Form1()
+        public FrmPaginaInicial()
         {
             InitializeComponent();
         }
@@ -28,6 +28,11 @@ namespace NandaMakeup
 
             FrmAgenda form = new FrmAgenda();
             form.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

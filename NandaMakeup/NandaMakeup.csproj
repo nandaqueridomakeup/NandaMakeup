@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogo.Designer.cs">
+      <DependentUpon>FrmCatalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLook.Designer.cs">
+      <DependentUpon>FrmLook.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAgenda.Designer.cs">
       <DependentUpon>FrmAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClienteNome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClienteNome.Designer.cs">
+      <DependentUpon>FrmClienteNome.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPaginaInicial.cs">
       <SubType>Form</SubType>
@@ -70,8 +88,20 @@
     <Compile Include="FrmProduct.Designer.cs">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMSenha.Designer.cs">
+      <DependentUpon>FRMSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCatalogo.resx">
+      <DependentUpon>FrmCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLook.resx">
+      <DependentUpon>FrmLook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAgenda.resx">
       <DependentUpon>FrmAgenda.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMSenha.resx">
+      <DependentUpon>FRMSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,6 +193,213 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cópia de 10 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nanda atualizado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Post Instagram maquiagem beleza cabelo marrom branco minimalista .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cópia de 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cópia de 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cópia de 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Look elegante10 x 5 cm%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="casacos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\202.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\261.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\271.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\142.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

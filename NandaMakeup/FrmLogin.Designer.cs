@@ -28,39 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btnlogin = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.PnlAcessCli = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // Btnlogin
+            // panel1
             // 
-            this.Btnlogin.BackColor = System.Drawing.Color.MintCream;
-            this.Btnlogin.Font = new System.Drawing.Font("Noto Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btnlogin.Location = new System.Drawing.Point(237, 495);
-            this.Btnlogin.Name = "Btnlogin";
-            this.Btnlogin.Size = new System.Drawing.Size(389, 59);
-            this.Btnlogin.TabIndex = 0;
-            this.Btnlogin.Text = "Clique aqui";
-            this.Btnlogin.UseVisualStyleBackColor = false;
-            this.Btnlogin.Click += new System.EventHandler(this.Btnlogin_Click);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(499, 441);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(342, 29);
+            this.panel1.TabIndex = 1;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // PnlAcessCli
+            // 
+            this.PnlAcessCli.BackColor = System.Drawing.Color.Transparent;
+            this.PnlAcessCli.Location = new System.Drawing.Point(36, 432);
+            this.PnlAcessCli.Name = "PnlAcessCli";
+            this.PnlAcessCli.Size = new System.Drawing.Size(310, 37);
+            this.PnlAcessCli.TabIndex = 2;
+            this.PnlAcessCli.Click += new System.EventHandler(this.PnlAcessCli_Click);
+            this.PnlAcessCli.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlAcessCli_Paint);
             // 
             // Frmroduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NandaMakeup.Properties.Resources.nanda4;
+            this.BackgroundImage = global::NandaMakeup.Properties.Resources.nanda_atualizado;
             this.ClientSize = new System.Drawing.Size(864, 600);
-            this.Controls.Add(this.Btnlogin);
+            this.Controls.Add(this.PnlAcessCli);
+            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Name = "Frmroduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro cliente";
+            this.Load += new System.EventHandler(this.Frmroduct_Load);
+            this.Click += new System.EventHandler(this.Frmroduct_Click);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Btnlogin;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PnlAcessCli;
     }
 }
 

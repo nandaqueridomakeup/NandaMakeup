@@ -17,10 +17,41 @@ namespace NandaMakeup
             InitializeComponent();
         }
 
-        private void Btnlogin_Click(object sender, EventArgs e)
+    
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-           Form1 product = new Form1();
-            product. ShowDialog();
+            
+            
+        }
+
+        private void Frmroduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+
+            FRMSenha product = new FRMSenha();
+            product.ShowDialog();
+            
+        }
+
+        private void Frmroduct_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void PnlAcessCli_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PnlAcessCli_Click(object sender, EventArgs e)
+        {
+            FrmLook look = new FrmLook();
+            look.ShowDialog();
         }
     }
 }
