@@ -29,12 +29,37 @@ namespace NandaMakeup
 
             // Destaca todas as datas existentes na tabela
             DestacarDatas();
+
+            CarregarAgenda(DateTime.Today);
+            DestacarDatas();
+
+            // Adiciona os botões apenas uma vez
+            if (!dataGridView1.Columns.Contains("Editar"))
+            {
+                DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
+                btnEditar.HeaderText = "";
+                btnEditar.Name = "Editar";
+                btnEditar.Text = "Editar";
+                btnEditar.UseColumnTextForButtonValue = true;
+                dataGridView1.Columns.Add(btnEditar);
+            }
+
+            if (!dataGridView1.Columns.Contains("Excluir"))
+            {
+                DataGridViewButtonColumn btnExcluir = new DataGridViewButtonColumn();
+                btnExcluir.HeaderText = "";
+                btnExcluir.Name = "Excluir";
+                btnExcluir.Text = "Excluir";
+                btnExcluir.UseColumnTextForButtonValue = true;
+                dataGridView1.Columns.Add(btnExcluir);
+            }
         }
+
 
         private void CarregarAgenda(DateTime datainicial)
         {
             string conexao = "Server=SQLEXPRESS;Database=CJ3027708PR2;User Id=aluno;Password=aluno;";
-            string sql = @"SELECT NOMECLI, HOSPEDAGEM, MUMERACAOROUPA, DATAAGENDA, DATACOMEMORATIVA, DATACOMEMORATIVADESCRI, HORARIO
+            string sql = @"SELECT NOMECLI, HOSPEDAGEM, MUMERACAOROUPA, DATAAGENDA, DATACOMEMORATIVA, DATACOMEMORATIVADESCRI, HORARIO, casaco
                    FROM cadcli
                    WHERE DATAAGENDA>= @datainicial
                    ORDER BY DATAAGENDA, HORARIO";
@@ -43,7 +68,7 @@ namespace NandaMakeup
             using (SqlCommand cmd = new SqlCommand(sql, con))
             {
                 cmd.Parameters.AddWithValue("@datainicial", datainicial);
-                
+
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -80,14 +105,25 @@ namespace NandaMakeup
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
-    {
-        // Voltar para a tela inicial
-        this.Close();
-    }
+        {
+            // Voltar para a tela inicial
+            this.Close();
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-        }
+            if (e.RowIndex < 0) return; // ignora header
+
+            // Clique no botão EDITAR
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                EditarRegistro(e.RowIndex);
+            }
+
+            // Clique no botão EXCLUIR
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Excluir")
+            {
+                ExcluirRegistro(e.RowIndex);
+            }
+        }l
     }
-}

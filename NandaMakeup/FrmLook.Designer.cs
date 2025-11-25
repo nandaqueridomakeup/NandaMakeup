@@ -38,6 +38,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(156, 42);
             this.panel1.TabIndex = 0;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // FrmLook
@@ -49,6 +50,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmLook";
             this.Text = "FrmLook";
+            this.Load += new System.EventHandler(this.FrmLook_Load);
             this.ResumeLayout(false);
 
         }

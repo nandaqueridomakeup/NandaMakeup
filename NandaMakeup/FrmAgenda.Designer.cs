@@ -35,16 +35,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(4, 39);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1150, 374);
+            this.dataGridView1.Size = new System.Drawing.Size(1437, 374);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(799, 190);
+            this.monthCalendar1.Location = new System.Drawing.Point(769, 194);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             // 
@@ -52,7 +53,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1190, 450);
+            this.ClientSize = new System.Drawing.Size(1453, 450);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmAgenda";

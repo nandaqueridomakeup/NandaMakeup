@@ -52,6 +52,12 @@
     <Compile Include="FrmCatalogo.Designer.cs">
       <DependentUpon>FrmCatalogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIdenficacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIdenficacao.Designer.cs">
+      <DependentUpon>FrmIdenficacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,12 +69,6 @@
     </Compile>
     <Compile Include="FrmAgenda.Designer.cs">
       <DependentUpon>FrmAgenda.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmClienteNome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmClienteNome.Designer.cs">
-      <DependentUpon>FrmClienteNome.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPaginaInicial.cs">
       <SubType>Form</SubType>
@@ -98,6 +98,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCatalogo.resx">
       <DependentUpon>FrmCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIdenficacao.resx">
+      <DependentUpon>FrmIdenficacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLook.resx">
       <DependentUpon>FrmLook.cs</DependentUpon>
@@ -400,6 +403,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\311.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,7 +19,19 @@ namespace NandaMakeup
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            
 
+        }
+
+        private void FrmLook_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            FrmCatalogo product = new FrmCatalogo();
+            product.ShowDialog();
         }
     }
 }
